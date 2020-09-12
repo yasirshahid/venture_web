@@ -24,7 +24,7 @@ Apps,
 ContactMail,
 MenuOpen
 } from "@material-ui/icons"
-import avatar from "../avatar.png"
+import yasirProfile from "../yasirProfile.png"
 
 // CSS STYLES
 const useStyles = makeStyles(theme=>({
@@ -77,8 +77,12 @@ const toggleSlider = (slider, open) => () => {
     const classes = useStyles();
 
     const sideList = slider => (
-        <Box className={classes.menuSliderContainer} component="div">
-          <Avatar className={classes.avatar} src={avatar} alt="Yasir shahid"/>
+        <Box 
+        className={classes.menuSliderContainer} 
+        component="div"
+        onClick={toggleSlider(slider,false)}
+        >
+          <Avatar className={classes.avatar} src={yasirProfile} alt="Yasir shahid"/>
           <Divider/>
           <List>
             {menuItems.map((lsItem,key)=>(
@@ -111,7 +115,11 @@ const toggleSlider = (slider, open) => () => {
                     <Typography style={{color:"#E5E4E2"}}  variant="h5">
                         Yasir's Portfolio
                     </Typography>
-                    <MobilRightMenuSlider anchor="right" open={state.right}>
+                    <MobilRightMenuSlider 
+                    anchor="right" 
+                    open={state.right}
+                    onClose={toggleSlider("right",false)}>
+                    
                       {sideList("right")}  
                     </MobilRightMenuSlider>
                 </Toolbar>
