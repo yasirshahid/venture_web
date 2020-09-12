@@ -30,7 +30,7 @@ import yasirProfile from "../yasirProfile.png"
 const useStyles = makeStyles(theme=>({
     menuSliderContainer: {
         width: 250,
-        background: "#2554C7",
+        background: "#117A65",
         height:"100rem"
 
     },
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme=>({
         height: theme.spacing(13)
     },
     listItem:{
-        color: "#E5E4E2"
+        color: "#F0F3F4 "
     }
 }));
 
@@ -107,12 +107,12 @@ const toggleSlider = (slider, open) => () => {
         <>
         
         <Box component="nav">
-            <AppBar position="static" style={{background: "#7D0552"}}>
+            <AppBar position="static" style={{background: "#283747"}}>
                 <Toolbar>
                     <IconButton onClick={toggleSlider("right", true)}>
-                        <MenuOpen style={{color:"#E5E4E2"}}/>
+                        <MenuOpen style={{color:"#F0F3F4"}}/>
                     </IconButton>
-                    <Typography style={{color:"#E5E4E2"}}  variant="h5">
+                    <Typography style={{color:"#F0F3F4"}}  variant="h5">
                         Yasir's Portfolio
                     </Typography>
                     <MobilRightMenuSlider 
