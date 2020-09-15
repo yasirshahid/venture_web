@@ -24,21 +24,21 @@ Apps,
 ContactMail,
 MenuOpen
 } from "@material-ui/icons"
-import yasirProfile from "../yasirProfile.png"
+import logoVenture4 from "../logoVenture4.png"
 
 // CSS STYLES
 const useStyles = makeStyles(theme=>({
     menuSliderContainer: {
         width: 250,
-        background: "#117A65",
+        background: "#9C27B0",
         height:"100rem"
 
     },
     avatar: {
         display: "block",
         margin: "0.5rem auto",
-        width: theme.spacing(13),
-        height: theme.spacing(13)
+        width: theme.spacing(20),
+        height: theme.spacing(20)
     },
     listItem:{
         color: "#F0F3F4 "
@@ -52,7 +52,7 @@ const menuItems =[
     },
     {
         listIcon: <AssignmentInd/>,
-        listText:"Resume"
+        listText:"Services"
     },
     {
         listIcon: <Apps/>,
@@ -82,7 +82,7 @@ const toggleSlider = (slider, open) => () => {
         component="div"
         onClick={toggleSlider(slider,false)}
         >
-          <Avatar className={classes.avatar} src={yasirProfile} alt="Yasir shahid"/>
+          <Avatar className={classes.avatar} src={logoVenture4} alt="Venture"/>
           <Divider/>
           <List>
             {menuItems.map((lsItem,key)=>(
@@ -113,7 +113,7 @@ const toggleSlider = (slider, open) => () => {
                         <MenuOpen style={{color:"#F0F3F4"}}/>
                     </IconButton>
                     <Typography style={{color:"#F0F3F4"}}  variant="h5">
-                        Yasir's Portfolio
+                        Portfolio
                     </Typography>
                     <MobilRightMenuSlider 
                     anchor="right" 
