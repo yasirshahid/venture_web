@@ -2,7 +2,7 @@ import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
 import {Typography, Avatar,Grid,Box } from "@material-ui/core";
 import Typed from "react-typed";
-import yasirProfile from "../yasirProfile.png";
+import logoVenture from "../logoVenture.png";
 import { CompassCalibrationRounded } from "@material-ui/icons";
 
 // CSS styles
@@ -15,11 +15,11 @@ const useStyles = makeStyles(theme => ({
 
     },
     title:{
-       color: "tomato",
+       color: "#9C27B0",
        fontFamily: "'Baloo 2', cursive;" 
     },
     subTitle: {
-        color: "tan",
+        color: "#9E9E9E ",
         marginBottom: "3rem",
         fontFamily: "'Baloo 2', cursive;"
     },
@@ -38,16 +38,20 @@ const Header = () => {
     return(
         <Box className={classes.typedContainer}>
             <Grid container justify ="center">
-                <Avatar className={classes.avatar} src={yasirProfile} alt="Yasir shahid"/>   
+                <Avatar className={classes.avatar} src={logoVenture} alt="Venture"/>   
             </Grid>
-            <Typography className={classes.title}  variant="h4">
-                <Typed strings={["Yasir Shahid"]} typeSpeed={40}/>
+            <Typography className={classes.title}  variant="h5">
+                <Typed strings={["Venture","We Inspire to CHANGE","We champion CREATIVITY!!!"]} typeSpeed={50} backSpeed={20}
+                loop/>
             </Typography>
-            <br/>
-            <Typography className={classes.subTitle}  variant="h4">
-                <Typed strings={["Design & Animation","Web Development","MERN Stack"]} 
-                typeSpeed={40}
-                backSpeed={60}
+            
+            <Typography className={classes.subTitle}  variant="h3">
+                <Typed strings={["Social Media","Web Development","Graphics Design","Animation","Production"]} 
+                typeSpeed={20}
+                backSpeed={100}
+                // backDelay={1}
+                fadeOut
+                cursorChar= {"."}
                 loop/>
             </Typography>
         </Box>
