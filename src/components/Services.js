@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 const Services = () =>{
     return(
-        <div>
-            <h1 fontColor="#E67E22">Hello Service</h1>
-        </div>
+        <>
+          <Navbar/>
+          <h1>Hello Service</h1>
+        </>
     )
 };
 
