@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import {Link} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
-import MobilRightMenuSlider from "@material-ui/core/Drawer"
+import MobilRightMenuSlider from "@material-ui/core/Drawer";
 
 
 import {
@@ -17,12 +18,11 @@ Box,
 ListItemIcon
 } from "@material-ui/core"
 import {
-
-AssignmentInd,
-Home,
+Info,
 Apps,
 ContactMail,
-MenuOpen
+MenuOpen,
+Business
 } from "@material-ui/icons"
 import logoVenture4 from "../logoVenture4.png"
 
@@ -47,20 +47,24 @@ const useStyles = makeStyles(theme=>({
 
 const menuItems =[
     {
-        listIcon: <Home/>,
-        listText:"Home"
+        listIcon: <Info/>,
+        listText:"About Us",
+        listPath: "/About"
     },
     {
-        listIcon: <AssignmentInd/>,
-        listText:"Services"
+        listIcon: <Business/>,
+        listText:"Our Services",
+        listPath: "/Services"
     },
     {
         listIcon: <Apps/>,
-        listText:"Portfolio"
+        listText:"Our Work",
+        listPath: "/Work"
     },
     {
         listIcon: <ContactMail/>,
-        listText:"Contacts"
+        listText:"Contact Us",
+        listPath: "/Contact"
     },
    
 ]
@@ -86,7 +90,7 @@ const toggleSlider = (slider, open) => () => {
           <Divider/>
           <List>
             {menuItems.map((lsItem,key)=>(
-                <ListItem button key={key}>
+                <ListItem button key={key} component={Link} to={lsItem.listPath}>
                   <ListItemIcon className={classes.listItem}>
                       {lsItem.listIcon} 
                   </ListItemIcon>
@@ -112,8 +116,8 @@ const toggleSlider = (slider, open) => () => {
                     <IconButton onClick={toggleSlider("right", true)}>
                         <MenuOpen style={{color:"#F0F3F4"}}/>
                     </IconButton>
-                    <Typography style={{color:"#F0F3F4"}}  variant="h5">
-                        Portfolio
+                    <Typography style={{color:"#F0F3F4"}}  variant="h6" fontfamily= "'Comfortaa', cursive;">
+                        Venture
                     </Typography>
                     <MobilRightMenuSlider 
                     anchor="right" 
