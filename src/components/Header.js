@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import {Typography, Avatar,Grid,Box } from "@material-ui/core";
 import Typed from "react-typed";
 import logoVenture from "../logoVenture.png";
-import { CompassCalibrationRounded } from "@material-ui/icons";
+
 
 // CSS styles
 
@@ -16,12 +16,12 @@ const useStyles = makeStyles(theme => ({
     },
     title:{
        color: "#9C27B0",
-       fontFamily: "'Baloo 2', cursive;" 
+       fontFamily: "'Comfortaa', cursive;" 
     },
     subTitle: {
         color: "#9E9E9E ",
         marginBottom: "3rem",
-        fontFamily: "'Baloo 2', cursive;"
+        fontFamily: "'Comfortaa', cursive;"
     },
     typedContainer:{
         position:"absolute",
@@ -48,7 +48,7 @@ const Header = () => {
             <Typography className={classes.subTitle}  variant="h3">
                 <Typed strings={["Social Media","Web Development","Graphics Design","Animation","Production"]} 
                 typeSpeed={20}
-                backSpeed={100}
+                backSpeed={200}
                 // backDelay={1}
                 fadeOut
                 cursorChar= {"."}
