@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Work from"./components/Work";
 import About from"./components/About";
 import Contact from"./components/Contact";
+import Clients from"./components/Clients";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Route path="/Services" component={Services}/>
     <Route path="/Work" component={Work}/>
     <Route path="/About" component={About}/>
+    <Route path="/Clients" component={Clients}/>
     <Route path="/Contact" component={Contact}/>
     </>
   );
