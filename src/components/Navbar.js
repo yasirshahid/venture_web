@@ -18,6 +18,8 @@ Box,
 ListItemIcon
 } from "@material-ui/core"
 import {
+Group,
+Home,
 Info,
 Apps,
 ContactMail,
@@ -47,6 +49,11 @@ const useStyles = makeStyles(theme=>({
 
 const menuItems =[
     {
+        listIcon:<Home/>,
+        listText:"Home",
+        listPath:"/"
+    },
+    {
         listIcon: <Info/>,
         listText:"About Us",
         listPath: "/About"
@@ -60,6 +67,11 @@ const menuItems =[
         listIcon: <Apps/>,
         listText:"Our Work",
         listPath: "/Work"
+    },
+    {
+        listIcon: <Group/>,
+        listText: "Our Clients",
+        listPath: "/Clients"
     },
     {
         listIcon: <ContactMail/>,
