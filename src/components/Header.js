@@ -40,12 +40,12 @@ const Header = () => {
             <Grid container justify ="center">
                 <Avatar className={classes.avatar} src={logoVenture} alt="Venture"/>   
             </Grid>
-            <Typography className={classes.title}  variant="h5">
-                <Typed strings={["Venture","We Inspire to CHANGE","We champion CREATIVITY!!!"]} typeSpeed={50} backSpeed={20}
+            <Typography className={classes.title}  variant="h6">
+                <Typed strings={["Venture","We Inspire to CHANGE","We champion CREATIVITY!!!"]} typeSpeed={90} backSpeed={20}
                 loop/>
             </Typography>
             
-            <Typography className={classes.subTitle}  variant="h3">
+            <Typography className={classes.subTitle}  variant="h4">
                 <Typed strings={["Social Media","Web Development","Graphics Design","Animation","Production"]} 
                 typeSpeed={20}
                 backSpeed={200}
